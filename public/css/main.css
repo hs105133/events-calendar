@@ -1,0 +1,19 @@
+body{
+  padding-top: 55px;
+}
+.page-header{
+  margin-top: 20px;
+}
+
+.mBottom{
+  margin-bottom: 20px;
+}
+.badge{
+	border-radius: 0;
+}
+
+@media screen and (min-width: 768px) {
+	.time{
+		margin-top: -10px;
+	}
+}

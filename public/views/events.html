@@ -1,0 +1,37 @@
+<div class="col-sm-12">
+		<h1 class="page-header">Events</h1>
+	    <table class="table table-bordered">
+
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Type</th>
+                <th>Starts at</th>
+                <th>Ends at</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr ng-repeat="event in events track by $index">
+                <td>
+                    {{ event.title }}
+                </td>
+                <td>
+                    {{ event.type }}
+                </td>
+                <td>
+                    {{ event.startsAt | date:'medium'}}
+                </td>
+                <td>
+					{{ event.endsAt | date:'medium'}}
+                </td>
+                <td>
+                    <a href="#/events/{{ event.id }}/edit" class="btn btn-primary btn-sm">Edit</a>
+                    <button class="btn btn-danger btn-sm" ng-click="removeEvent($index, event.id)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+
+    </table>
+</div>

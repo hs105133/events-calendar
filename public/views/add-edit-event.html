@@ -1,0 +1,64 @@
+<div class="col-sm-8 col-sm-offset-2">
+<h3 class="page-header">
+    <span ng-if="!event.id">Add</span> 
+    <span ng-if="event.id">Edit</span> 
+    Event
+</h3>
+    <form role="form" novalidate name="addEditEventForm" ng-submit="addEditEvent(event)">
+        <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" class="form-control" ng-model="event.title" name="title" required>
+        </div>
+        <div class="form-group">
+            <label for="type">Type</label>
+            <select ng-model="event.type" name="type" class="form-control" required>
+                <option value="important">Important</option>
+                <option value="warning">Warning</option>
+                <option value="info">Info</option>
+                <option value="inverse">Inverse</option>
+                <option value="success">Success</option>
+                <option value="special">Special</option>
+            </select>
+        </div>
+        <div class="form-group">    
+            <div class="row">
+                <div class="col-sm-4">
+                    <label for="startsAt">Starts At</label>
+                    <div class="input-group" style="max-width: 250px">
+                        <input type="text" class="form-control" datepicker-popup ng-model="event.startsAt"  is-open="startOpen" min-date="minDate" required />
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-default" ng-click="toggle($event, 'startOpen')"><i class="glyphicon glyphicon-calendar"></i></button>
+                        </span>
+                    </div>                    
+                </div>
+                <div class="time col-sm-4">
+                    <timepicker ng-model="startTime" hour-step="1" minute-step="15" show-meridian="true"></timepicker>            
+                </div>
+            </div>
+
+        </div>
+
+        <div class="form-group">    
+            <div class="row">
+                <div class="col-sm-4">
+                    <label for="endsAt">Ends At</label>
+                    <div class="input-group" style="max-width: 250px">
+                        <input type="text" class="form-control" datepicker-popup ng-model="event.endsAt"  is-open="endOpen" min-date="minDate" required />
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-default" ng-click="toggle($event, 'endOpen')"><i class="glyphicon glyphicon-calendar"></i></button>
+                        </span>
+                    </div>                    
+                </div>
+                <div class="time col-sm-4">
+                    <timepicker ng-model="endTime" hour-step="1" minute-step="15" show-meridian="true"></timepicker>            
+                </div>
+            </div>
+
+        </div>
+    <button class="btn btn-primary" type="submit" ng-disabled="addEditEventForm.$invalid">
+        <span ng-if="event.id">Update</span><span ng-if="!event.id">Add</span> Event
+    </button>
+    <a  class="btn btn-warning" href="#/">Cancel</a>
+    </form>
+
+</div>

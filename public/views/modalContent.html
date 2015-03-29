@@ -1,0 +1,27 @@
+<div class="modal-header">
+    <h3 class="modal-title">Event <em>{{ event.title }}</em> Detail</h3>
+</div>
+<div class="modal-body">
+    <form role="form" novalidate name="myFormView">
+        <div class="form-group">
+            <label for="title">Title</label>
+            <p class="form-control-static">{{ event.title }}</p>
+        </div>
+        <div class="form-group">
+            <label for="type">Type</label>
+            <p class="form-control-static">{{ event.type }}</p>
+        </div>
+        <div class="form-group">
+            <label for="startsAt">Starts At</label>
+            <p class="form-control-static">{{ event.startsAt | date:'medium'}}</p>
+        </div>
+
+        <div class="form-group">
+            <label for="endsAt">Ends At</label>
+            <p class="form-control-static">{{ event.endsAt | date:'medium' }}</p>
+        </div>
+    </form>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary pull-left" ng-click="$modalInstance.close()">OK</button>
+</div>
