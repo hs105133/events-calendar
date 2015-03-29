@@ -1,7 +1,7 @@
 'use strict';
 
 angular
-  .module('calApp', ['mwl.calendar', 'ui.bootstrap', 'ngRoute'])
+  .module('calApp', ['mwl.calendar', 'ui.bootstrap', 'ngRoute', 'angular.filter'])
   .config(function($routeProvider){
     $routeProvider.when("/", {
         templateUrl: "views/home.html",
@@ -18,6 +18,10 @@ angular
     .when("/events/:eventId/edit", {
         templateUrl: "views/add-edit-event.html",
         controller: "AddEditEventCtrl"
+    })
+    .when("/group-events", {
+        templateUrl: "views/group-events.html",
+        controller: "GroupEventsCtrl"
     })
     .otherwise("/");
   });

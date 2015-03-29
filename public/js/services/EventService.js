@@ -1,5 +1,5 @@
 angular.module("calApp")
-    .constant("BASE_URL", "http://hkapi.herokuapp.com/events/")
+    .constant("BASE_URL", "https://hkapi.herokuapp.com/events/")
     .value("DateService", {
             currentYear: moment().year(),
             currentMonth: moment().month()

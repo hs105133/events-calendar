@@ -1,0 +1,31 @@
+<div class="col-sm-8 col-sm-offset-2">
+    <div class="row page-header">
+        <div class="col-sm-6">
+            <h1>Group Events</h1>
+        </div>
+        <div class="col-sm-6 groupBy">
+            <form action="" method="POST" class="form-inline pull-right" role="form">
+                <div class="form-group">
+                    <label for="">Group By</label>
+                    <select class="form-control" ng-model="groupByModel">
+						<option value="title">Title</option>			
+						<option value="type">Type</option>			
+						<option value="startsAt">Starts At</option>			
+						<option value="endsAt">Ends At</option>			
+                    </select>
+                </div>
+            </form>
+        </div>
+    </div>
+	
+	<div class="panel panel-warning" ng-repeat="(key, value) in events | groupBy: groupByModel">
+		  <div class="panel-heading">
+				<h3 class="panel-title">{{ key }}</h3>
+		  </div>
+		<ul class="list-group">
+			<li class="list-group-item" ng-repeat="item in value">{{ item.title }}</li>
+		</ul>
+	</div>
+</div>
+
+

@@ -2,6 +2,8 @@
 
 ![events screen](githubimg/events-home.png)
 
+Live Demo - https://events-calendar.herokuapp.com/
+
 ## REST API
 http://hkapi.herokuapp.com/events/
 
@@ -35,8 +37,9 @@ now do any changes  in `public` folder and see effect here http://localhost:5000
 
 ![all events](githubimg/events.png)
 
-- Create new event
+- Create new event 
 - View specific events
 - Update existing event
 - Delete existing event
+- Events grouping
 

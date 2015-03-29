@@ -12,8 +12,17 @@ body{
 	border-radius: 0;
 }
 
+.groupBy{
+	bottom: -25px;
+}
+
+.groupBy label{
+	margin-right: 20px;
+}
+
 @media screen and (min-width: 768px) {
 	.time{
 		margin-top: -10px;
 	}
 }
+
