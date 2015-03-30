@@ -1,4 +1,5 @@
 # Events Calendar
+Demo - http://hs105133.github.io/events-calendar/public/
 
 ![events screen](githubimg/events-home.png)
 
