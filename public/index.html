@@ -19,17 +19,16 @@
 <div class="container-fluid">
     
   <div class="navbar-header">
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-      <span class="sr-only">Toggle navigation</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
+  <button type="button" class="navbar-toggle" ng-click="navbarCollapsed = !navbarCollapsed">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
     <a class="navbar-brand" href="#/">Events Calendar</a>
   </div>
 
-  <div class="collapse navbar-collapse navbar-ex1-collapse">
-
+    <div class="collapse navbar-collapse" collapse="navbarCollapsed">
     <ul class="nav navbar-nav navbar-right">
       <li ng-class="{active: $path() == '/events'}"><a href="#/events">Events</a></li>
       <li ng-class="{active: $path() == '/events/create'}"><a href="#/events/create">Create Event</a></li>
