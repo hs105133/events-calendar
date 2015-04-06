@@ -20,6 +20,10 @@ body{
 	margin-right: 20px;
 }
 
+.favourite{
+margin-right: 5px;
+margin-top: 3px;
+}
 @media screen and (min-width: 768px) {
 	.time{
 		margin-top: -10px;

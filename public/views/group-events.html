@@ -20,10 +20,10 @@
 	
 	<div class="panel panel-warning" ng-repeat="(key, value) in events | groupBy: groupByModel">
 		  <div class="panel-heading">
-				<h3 class="panel-title">{{ key }}</h3>
+				<h3 class="panel-title">{{ key | date: 'medium' }}</h3>
 		  </div>
 		<ul class="list-group">
-			<li class="list-group-item" ng-repeat="item in value">{{ item.title }}</li>
+			<li class="list-group-item" ng-repeat="item in value">{{ item.title}}</li>
 		</ul>
 	</div>
 </div>

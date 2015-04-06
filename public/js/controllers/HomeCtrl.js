@@ -14,7 +14,9 @@ angular.module("calApp")
         .error(function(){
     var currentYear = moment().year();
     var currentMonth = moment().month();
-
+    $scope.toggleFavourite = function(){
+      console.log("herer0");
+    }
     //These variables MUST be set as a minimum for the calendar to work
     $scope.calendarView = 'month';
     $scope.calendarDay = new Date();
